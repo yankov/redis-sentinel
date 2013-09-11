@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'redis-sentinel/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "redis-sentinel"
+  gem.name          = "redis-sentinel2"
   gem.version       = Redis::Sentinel::VERSION
   gem.authors       = ["Richard Huang"]
   gem.email         = ["flyerhzm@gmail.com"]
-  gem.description   = %q{another redis automatic master/slave failover solution for ruby by using built-in redis sentinel}
-  gem.summary       = %q{another redis automatic master/slave failover solution for ruby by using built-in redis sentinel}
+  gem.description   = %q{another redis automatic master/slave failover solution for ruby by using built-in redis sentinel. This version works with redis 2.2.2}
+  gem.summary       = %q{another redis automatic master/slave failover solution for ruby by using built-in redis sentinel. This version works with redis 2.2.2}
   gem.homepage      = "https://github.com/flyerhzm/redis-sentinel"
 
   gem.files         = `git ls-files`.split($/)

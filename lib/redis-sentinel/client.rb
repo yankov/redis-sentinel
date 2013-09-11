@@ -94,7 +94,7 @@ class Redis::Client
     def call_with_readonly_protection(*args, &block)
       tries = 0
       call_without_readonly_protection(*args, &block)
-    rescue Redis::CommandError => e
+    rescue RuntimeError, Redis::CommandError => e
       if e.message == "READONLY You can't write against a read only slave."
         reconnect
         retry if (tries += 1) < 4
